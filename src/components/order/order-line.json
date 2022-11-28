@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_order_order_lines",
+  "info": {
+    "displayName": "Order Line",
+    "icon": "align-justify",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "product_variant": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product-variant.product-variant"
+    },
+    "unit_price": {
+      "type": "integer"
+    },
+    "quantity": {
+      "type": "integer"
+    },
+    "line_price": {
+      "type": "integer"
+    }
+  }
+}

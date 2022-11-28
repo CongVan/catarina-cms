@@ -1,0 +1,60 @@
+{
+  "kind": "collectionType",
+  "collectionName": "orders",
+  "info": {
+    "singularName": "order",
+    "pluralName": "orders",
+    "displayName": "Order",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "total": {
+      "type": "integer"
+    },
+    "sub_total": {
+      "type": "integer"
+    },
+    "lines": {
+      "displayName": "Order Line",
+      "type": "component",
+      "repeatable": true,
+      "component": "order.order-line"
+    },
+    "status": {
+      "type": "enumeration",
+      "enum": [
+        "DRAFT",
+        "PROCESSING",
+        "VERIFYED",
+        "SHIPPED",
+        "DILIVERED",
+        "CANCELLED"
+      ]
+    },
+    "note": {
+      "type": "text"
+    },
+    "discounts": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::discount.discount"
+    },
+    "active": {
+      "type": "boolean"
+    },
+    "customer": {
+      "displayName": "customer",
+      "type": "component",
+      "repeatable": false,
+      "component": "order.customer"
+    },
+    "request_id": {
+      "type": "string",
+      "required": true
+    }
+  }
+}

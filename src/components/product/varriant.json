@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_product_varriants",
+  "info": {
+    "displayName": "varriant",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "sku": {
+      "type": "string"
+    },
+    "price": {
+      "type": "integer"
+    },
+    "active": {
+      "type": "boolean"
+    },
+    "in_stock": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}
